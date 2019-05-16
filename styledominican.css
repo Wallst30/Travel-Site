@@ -1,0 +1,38 @@
+head{
+    
+}
+body{
+    background-image: url(drbak2.jpg)
+}
+
+.nav-container{ 	
+width:100%; 
+background-color: #c38d9e;
+box-shadow: 2px 2px 20px #e8a87c;  
+position:fixed; 
+left:0;  
+top:0;
+} 
+
+.nav-container ul{
+width:100%;
+margin: auto;
+padding:0; 
+list-style-type: none; 
+font-size:18px;  
+font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+}  
+
+.nav-container li{
+float: left; 
+}  
+
+.nav-container a{ 
+display: block;   
+box-sizing: border-box; 
+width: 130px; 
+padding: 1px;
+text-decoration: none;  
+text-align: center; 
+color:white;
+} 

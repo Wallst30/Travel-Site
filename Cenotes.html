@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#31F7F2;padding:15px;">
+  <h1>X Caret and Cenotes</h1>
+  <h3>Playa del Carmen</h3>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d954451.3131625653!2d-87.9922110640276!3d20.858928874909868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e446dadd87053%3A0x8042e81e921809a5!2sXcaret!5e0!3m2!1sen!2sus!4v1558022697093!5m2!1sen!2sus" width="200" height="150" frameborder="0" style="border:0" allowfullscreen align ="right"></iframe>
+ <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+  <h5 class="w3-bar-item">Menu</h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'London')">Cenotes</button>
+
+     <br>
+      <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris')">X Caret</button>
+     <br>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')">Gallery</button>
+    
+</div>
+
+
+
+  <div id="London" class="w3-container city" style="display:none">
+    <h2>Cenotes</h2>
+    <p>Swimming Activites</p>
+    <p>Cenotes are surface connections to subterranean water bodies. While the best-known cenotes are large open water pools measuring tens of meters in diameter, such as those at Chichén Itzá in Mexico, the greatest number of cenotes are smaller sheltered sites and do not necessarily have any surface exposed water.</p>
+  </div>
+
+    <div id="Paris" class="w3-container city" style="display:none">
+    <h2>X Caret</h2>
+    <p>Water Park</p>
+    <p>Xcaret is the nature park in Playa del Carmen where you and your family will live Mexico in more than 50 natural and cultural attractions. Swim in underground rivers that come from the heart of the earth. ... Enjoy the wealth of Mexico in the most emblematic park of Playa del Carmen and the Riviera Maya.</p>
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+      <h2>Check out these photos </h2>
+    <div class="w3-container">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col s3 w3-container">
+  <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Sunset');">
+    <img src="IMG_1504.jpg" alt="Sunset" style="width:10%">
+  </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Cliff');">
+      <img src="IMG_1505.jpg" alt="Cliff" style="width:10%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains');">
+      <img src="IMG_1891.jpg" alt="Mountains" style="width:10%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+       <video width="320" alt="lights" height="240" controls>
+  <source src="IMG_1775.m4v" type="video/mp4">
+</video>
+    </a>
+  </div>
+</div><br>
+
+<div id="Sunset" class="picture w3-display-container" style="display:none">
+  <img src="IMG_1504.jpg" alt="Nature" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Cenote</div>
+</div>
+
+<div id="Cliff" class="picture w3-display-container" style="display:none">
+  <img src="IMG_1505.jpg" alt="Cliff" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Dos Ojos Cenote</div>
+</div>
+
+<div id="Mountains" class="picture w3-display-container" style="display:none">
+  <img src="IMG_1891.jpg" alt="Mountains" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">X Caret</div>
+</div>
+
+
+<script>
+function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("picture");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+</script>
+  </div>
+
+<div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+   
+  </div>
+
+  
+
+</body>
+    <a href="Index.html"> Back to Main page</a>
+    <br>
+    <a href="Mexico.html"> Back to Previous page</a>
+</html>

@@ -1,0 +1,168 @@
+
+.nav-container{ 	
+width:100%; 
+background-color: #c38d9e;
+box-shadow: 2px 2px 20px #e8a87c;  
+position:fixed; 
+left:0;  
+top:0;
+} 
+
+.nav-container ul{
+width:100%;
+margin: auto;
+padding:0; 
+list-style-type: none; 
+font-size:18px;  
+font-family:"Gill Sans", Helvetica, Arial, sans-serif;
+}  
+
+.nav-container li{
+float: left; 
+}  
+
+.nav-container a{ 
+display: block;   
+box-sizing: border-box; 
+width: 130px; 
+padding: 10px;
+text-decoration: none;  
+text-align: center; 
+color:white;
+} 
+
+.nav-container a:link{ 
+background-color: #85dcb1;
+}
+
+.nav-container a:visited{ 
+background-color: #85dcb1;
+}
+
+.nav-container a:hover{ 
+background-color: brown;
+}
+
+.nav-container a:active{ 
+background-color: white;
+}
+
+.mybanner{ 
+	max-width:100%; 
+	max-height: auto;
+	margin:0 auto;
+	}
+
+.mydiv{
+	box-sizing:border-box;
+	border: solid 15px #f9f2ec;
+	padding: 0;
+	float:left;
+	margin: 25px 25px 25px 0;
+	}
+
+
+.video-apollo{
+	clear:left;
+	float:left;
+	margin: 0 15px 15px 0;
+	border: solid 15px #f9f2ec;
+	padding: 0;
+}
+
+.anim2{
+	border: solid 15px #f9f2ec;
+}
+
+.banner{
+	height:230px;
+	background-image: url("Travel_Stampsbak.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-color: snow;
+	font-size:40px;
+	text-align: center;
+	line-height: 50px;
+	color:black;
+	padding-top:40px;
+	border-top:double 10px white ;
+	border-bottom:double 10px white;
+	margin: 16px 0 36px 0;
+}
+	
+body{
+	margin: 80px 15% 50px 15%;
+	background-image:url(.jpg);
+	font-family: 'Roboto Condensed', sans-serif;
+	color:black;
+	}
+
+h1{
+	font-family: cursive;
+	font-size: 48px;
+	color: brown;
+	
+	padding: 0 5px 5px 5px;
+	width: 500px;
+	}
+
+.rt-resposive{
+	max-width:auto;
+	height: auto;
+	float: right;
+	margin: 0 0 0 15px;
+	border:solid 5px #41b3a3;
+}
+.rt{
+	max-width:auto;
+	height: 400px;
+	width: 350px;
+	float: right;
+	margin: 0 0 0 15px;
+	border:solid 5px #41b3a3;
+}
+.navajo{
+
+max-width:auto;
+	height: 500px;
+	width: 250px;
+	float: right;
+	margin: 0 0 0 15px;
+	border:solid 5px #41b3a3;
+}
+.Jamaica{
+
+max-width:auto;
+	height: 350px;
+	width: 350px;
+	float: right;
+	margin: 0 0 0 15px;
+	border:solid 5px brown;
+}
+
+.sioux{
+
+max-width:auto;
+	height: 450px;
+	width: 350px;
+	float: right;
+	margin: 0 0 0 15px;
+	border:solid 5px brown;
+}
+
+.lt-resposive{
+	float: left;
+	margin: 0 15px 0 0;
+	border:solid 5px brown;
+}
+.fix{
+
+	float: left;
+	margin: 30px 50px 50px 15px;
+	border:solid 5px brown;
+}
+
+p{
+	text-align: justify;
+
+	}

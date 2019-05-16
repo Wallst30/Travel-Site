@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#fcf64e;padding:15px;">
+  <h1>Rick's Cafe</h1>
+  <h3>Negril</h3>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15156.13472486447!2d-78.3634484!3d18.2542775!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd50aa55ffa3857cd!2sRick&#39;s+Cafe!5e0!3m2!1sen!2sus!4v1557435760202!5m2!1sen!2sus" width="300" height="450" frameborder="0" style="border:0" allowfullscreen align ="right"></iframe>
+ <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+  <h5 class="w3-bar-item">Menu</h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'London')">About</button>
+
+     <br>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')">Gallery</button>
+</div>
+
+
+
+  <div id="London" class="w3-container city" style="display:none">
+    <h2>Rick's Cafe</h2>
+    <p>Music, Food, Activites </p>
+    <p>Come get out Rick's Cafe beautiful sunset, which people come from all around the world to see! Try some really good traditional food while you indugle in live reggae music. Let me guess? You came for the excitement because you heard about the 43 ft cliff dive. Theres three other jumps but come on your brave enough. Enjoy the beautfil water of Negril!</p>
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+      <h2>Check out these photos </h2>
+    <div class="w3-container">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col s3 w3-container">
+  <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Sunset');">
+    <img src="IMG_8806.jpg" alt="Sunset" style="width:10%">
+  </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Cliff');">
+      <img src="IMG_8771.jpg" alt="Cliff" style="width:10%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Mountains');">
+      <img src="IMG_8700.jpg" alt="Mountains" style="width:10%">
+    </a>
+  </div>
+  <div class="w3-col s3 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+      <img src="IMG_8651.jpg" alt="Lights" style="width:10%">
+    </a>
+  </div>
+</div><br>
+
+<div id="Sunset" class="picture w3-display-container" style="display:none">
+  <img src="IMG_8806.jpg" alt="Nature" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Sunset</div>
+</div>
+
+<div id="Cliff" class="picture w3-display-container" style="display:none">
+  <img src="IMG_8771.jpg" alt="Cliff" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Cliff</div>
+</div>
+
+<div id="Mountains" class="picture w3-display-container" style="display:none">
+  <img src="IMG_8700.jpg" alt="Mountains" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Mountains</div>
+</div>
+
+<div id="Lights" class="picture w3-display-container" style="display:none">
+  <img src="IMG_8651.jpg" alt="Lights" style="width:50%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white">Northern Lights</div>
+</div>
+
+<script>
+function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("picture");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+</script>
+  </div>
+
+<div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+   
+  </div>
+
+  
+
+</body>
+    <a href="Index.html"> Back to Main page</a>
+    <br>
+    <a href="Jamaica.html"> Back to Previous page</a>
+</html>
